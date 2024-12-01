@@ -34,7 +34,7 @@ function checkAnswer(puzzleNumber) {
             correctAnswer = 'jingle bell';
             break;
         case 2:
-            correctAnswer = 'frost';
+            correctAnswer = '87';
             break;
         case 3:
             correctAnswer = '13';
