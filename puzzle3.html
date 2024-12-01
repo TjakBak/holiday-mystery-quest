@@ -12,12 +12,40 @@
         <h2>Puzzle 3: The Numeric Sequence</h2>
         <p>Find the next number in the sequence:</p>
         <h3>2, 3, 5, 7, 11, ?</h3>
-        <p>Hint: Think of prime numbers.</p>
+        
+        <!-- Hint Section -->
+        <button id="hint-button">Hint</button>
+        <div id="hint-confirmation" style="display: none;">
+            <p>Are you sure you want a hint?</p>
+            <button id="confirm-yes">Yes</button>
+            <button id="confirm-no">No</button>
+        </div>
+        <p id="hint-text" style="display: none;">Hint: Think of prime numbers.</p>
+
+        <!-- Answer Input -->
         <input type="text" id="answer" placeholder="Your answer here">
         <button onclick="checkAnswer(3)">Submit</button>
         <p id="feedback"></p>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript to handle hint confirmation and display
+        const hintButton = document.getElementById('hint-button');
+        const hintConfirmation = document.getElementById('hint-confirmation');
+        const hintText = document.getElementById('hint-text');
+
+        hintButton.addEventListener('click', () => {
+            hintConfirmation.style.display = 'block';
+        });
+
+        document.getElementById('confirm-yes').addEventListener('click', () => {
+            hintText.style.display = 'block';
+            hintConfirmation.style.display = 'none';
+        });
+
+        document.getElementById('confirm-no').addEventListener('click', () => {
+            hintConfirmation.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
