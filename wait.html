@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>Patience is a Virtue</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="timer.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -14,5 +13,13 @@
         <p>You have solved this puzzle! The next one will be available shortly.</p>
         <p id="timer"></p>
     </div>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const puzzleNumber = parseInt(urlParams.get('puzzle'), 10);
+        const previousPuzzle = puzzleNumber - 1;
+        displayTimer(`timer${previousPuzzle}`, puzzleNumber);
+    </script>
 </body>
 </html>
