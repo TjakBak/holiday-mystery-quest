@@ -40,7 +40,7 @@ function checkAnswer(puzzleNumber) {
             correctAnswer = '13';
             break;
         case 4:
-            correctAnswer = 'Tamagotchi'; 
+            correctAnswer = 'tamagotchi'; 
             break;
         case 5:
             correctAnswer = 'holiday';
