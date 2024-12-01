@@ -40,7 +40,7 @@ function checkAnswer(puzzleNumber) {
             correctAnswer = '13';
             break;
         case 4:
-            correctAnswer = '246'; // Adjust based on your image
+            correctAnswer = 'Tamagotchi'; 
             break;
         case 5:
             correctAnswer = 'holiday';
