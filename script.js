@@ -31,7 +31,7 @@ function checkAnswer(puzzleNumber) {
 
     switch (puzzleNumber) {
         case 1:
-            correctAnswer = 'jingle bell';
+            correctAnswer = 'jingle bells';
             break;
         case 2:
             correctAnswer = '87';
@@ -56,7 +56,7 @@ function checkAnswer(puzzleNumber) {
         // Save progress and start timer
         localStorage.setItem(`puzzle${puzzleNumber}Solved`, 'true');
         if (puzzleNumber < 6) {
-            startTimer(`timer${puzzleNumber}`, 5 * 60); // 5 minutes in seconds
+            startTimer(`timer${puzzleNumber}`, 2 * 60); // 5 minutes in seconds
             window.location.href = `wait.html?puzzle=${puzzleNumber + 1}`;
         } else {
             window.location.href = 'congratulations.html';
